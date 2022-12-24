@@ -29,8 +29,8 @@ MyST Markdown in Sphinx.
 %license LICENSE
 %doc README.md
 %{_bindir}/myst-*
-%{py_sitedir}/myst-parser
-%{py_sitedir}/myst-parser-*.*-info
+%{py_sitedir}/myst_parser
+%{py_sitedir}/myst_parser-*.*-info
 
 #--------------------------------------------------------------------
 
