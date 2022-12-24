@@ -3,7 +3,7 @@ Name:		python-myst-parser
 Version:	0.18.1
 Release:	1
 Group:		Development/Python
-License:	BSD
+License:	MIT
 URL:		https://github.com/executablebooks/MyST-Parser
 #Source0:	https://github.com/executablebooks/MyST-Parser/archive/%{version}/myst-parser-%{version}.tar.gz
 Source0:	https://pypi.io/packages/source/m/myst-parser/myst-parser-%{version}.tar.gz
