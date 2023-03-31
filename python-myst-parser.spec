@@ -1,7 +1,7 @@
 Summary:	An extended commonmark compliant parser, with bridges to docutils & sphinx
 Name:		python-myst-parser
 Version:	0.18.1
-Release:	1
+Release:	2
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/executablebooks/MyST-Parser
