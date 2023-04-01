@@ -1,16 +1,16 @@
 Summary:	An extended commonmark compliant parser, with bridges to docutils & sphinx
 Name:		python-myst-parser
-Version:	0.18.1
-Release:	2
+Version:	1.0.0
+Release:	1
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/executablebooks/MyST-Parser
 #Source0:	https://github.com/executablebooks/MyST-Parser/archive/%{version}/myst-parser-%{version}.tar.gz
 Source0:	https://pypi.io/packages/source/m/myst-parser/myst-parser-%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python3dist(pip)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(wheel)
+BuildRequires:	python%{py_ver}dist(pip)
+BuildRequires:	python%{py_ver}dist(setuptools)
+BuildRequires:	python%{py_ver}dist(wheel)
 
 BuildArch:	noarch
 
