@@ -8,9 +8,10 @@ URL:		https://github.com/executablebooks/MyST-Parser
 #Source0:	https://github.com/executablebooks/MyST-Parser/archive/%{version}/myst-parser-%{version}.tar.gz
 Source0:	https://pypi.io/packages/source/m/myst-parser/myst-parser-%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python%{py_ver}dist(pip)
-BuildRequires:	python%{py_ver}dist(setuptools)
-BuildRequires:	python%{py_ver}dist(wheel)
+BuildRequires:	python%{pyver}dist(mdit-py-plugins
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 
 BuildArch:	noarch
 
