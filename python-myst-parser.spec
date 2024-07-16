@@ -1,6 +1,6 @@
 Summary:	An extended commonmark compliant parser, with bridges to docutils & sphinx
 Name:		python-myst-parser
-Version:	2.0.0
+Version:	3.0.1
 Release:	1
 Group:		Development/Python
 License:	MIT
@@ -43,4 +43,3 @@ MyST Markdown in Sphinx.
  
 %install
 %py_install
-
