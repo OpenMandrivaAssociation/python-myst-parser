@@ -1,6 +1,6 @@
 Summary:	An extended commonmark compliant parser, with bridges to docutils & sphinx
 Name:		python-myst-parser
-Version:	4.0.0
+Version:	4.0.1
 Release:	1
 Group:		Development/Python
 License:	MIT
@@ -14,6 +14,9 @@ BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(wheel)
 
 BuildArch:	noarch
+
+%patchlist
+https://github.com/executablebooks/MyST-Parser/pull/1045.patch
 
 %description
 MyST is a rich and extensible flavor of Markdown meant for technical
