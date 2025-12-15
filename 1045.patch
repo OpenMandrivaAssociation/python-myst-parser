@@ -1,8 +1,7 @@
-diff --git a/pyproject.toml b/pyproject.toml
-index e97dff7f..3ce19997 100644
---- a/pyproject.toml
-+++ b/pyproject.toml
-@@ -34,7 +34,7 @@ keywords = [
+diff -up myst_parser-4.0.1/pyproject.toml.1~ myst_parser-4.0.1/pyproject.toml
+--- myst_parser-4.0.1/pyproject.toml.1~	2025-02-12 11:52:59.378123000 +0100
++++ myst_parser-4.0.1/pyproject.toml	2025-12-15 06:40:53.029509163 +0100
+@@ -34,12 +34,12 @@ keywords = [
  ]
  requires-python = ">=3.10"
  dependencies = [
@@ -11,3 +10,9 @@ index e97dff7f..3ce19997 100644
      "jinja2", # required for substitutions, but let sphinx choose version
      "markdown-it-py~=3.0",
      "mdit-py-plugins~=0.4,>=0.4.1",
+     "pyyaml",
+-    "sphinx>=7,<9",
++    "sphinx>=7,<10",
+ ]
+ 
+ [project.urls]
