@@ -1,22 +1,29 @@
-Summary:	An extended commonmark compliant parser, with bridges to docutils & sphinx
+%define module myst-parser
+%define oname myst_parser
+
 Name:		python-myst-parser
-Version:	4.0.1
-Release:	2
+Summary:	An extended commonmark compliant parser, with bridges to docutils & sphinx
+Version:	5.0.0
+Release:	1
 Group:		Development/Python
 License:	MIT
 URL:		https://github.com/executablebooks/MyST-Parser
-#Source0:	https://github.com/executablebooks/MyST-Parser/archive/%{version}/myst-parser-%{version}.tar.gz
-Source0:	https://pypi.io/packages/source/m/myst-parser/myst_parser-%{version}.tar.gz
+#Source0:	https://github.com/executablebooks/MyST-Parser/archive/v%%{version}/%%{name}-%%{version}.tar.gz
+Source0:	https://pypi.io/packages/source/m/%{module}/%{oname}-%{version}.tar.gz#/%{name}-%{version}.tar.gz
+
+BuildSystem:	python
+BuildArch:	noarch
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python%{pyver}dist(mdit-py-plugins)
+BuildRequires:	python%{pyver}dist(flit-core)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(wheel)
-
-BuildArch:	noarch
-
-%patchlist
-https://github.com/executablebooks/MyST-Parser/pull/1045.patch
+BuildRequires:	python%{pyver}dist(docutils)
+BuildRequires:	python%{pyver}dist(jinja2)
+BuildRequires:	python%{pyver}dist(markdown-it-py)
+BuildRequires:	python%{pyver}dist(mdit-py-plugins)
+BuildRequires:	python%{pyver}dist(pyyaml)
+BuildRequires:	python%{pyver}dist(sphinx)
 
 %description
 MyST is a rich and extensible flavor of Markdown meant for technical
@@ -30,19 +37,8 @@ using markdown-it-py, as well as a Sphinx extension that allows you to write
 MyST Markdown in Sphinx.
 
 %files
-%license LICENSE
 %doc README.md
-%{_bindir}/myst-*
-%{py_sitedir}/myst_parser
-%{py_sitedir}/myst_parser-*.*-info
-
-#--------------------------------------------------------------------
-
-%prep
-%autosetup -n myst_parser-%{version}
-
-%build
-%py_build
- 
-%install
-%py_install
+%license LICENSE
+%{_bindir}/myst-{anchors,docutils-demo,docutils-html,docutils-html5,docutils-latex,docutils-pseudoxml,docutils-xml,inv}
+%{py_sitedir}/%{oname}
+%{py_sitedir}/%{oname}-%{version}.dist-info
