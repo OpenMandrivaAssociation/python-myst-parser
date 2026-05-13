@@ -3,7 +3,7 @@
 
 Name:		python-myst-parser
 Summary:	An extended commonmark compliant parser, with bridges to docutils & sphinx
-Version:	5.0.0
+Version:	5.1.0
 Release:	1
 Group:		Development/Python
 License:	MIT
@@ -38,7 +38,6 @@ MyST Markdown in Sphinx.
 
 %files
 %doc README.md
-%license LICENSE
 %{_bindir}/myst-{anchors,docutils-demo,docutils-html,docutils-html5,docutils-latex,docutils-pseudoxml,docutils-xml,inv}
-%{py_sitedir}/%{oname}
-%{py_sitedir}/%{oname}-%{version}.dist-info
+%{python_sitelib}/%{oname}
+%{python_sitelib}/%{oname}-%{version}.dist-info
