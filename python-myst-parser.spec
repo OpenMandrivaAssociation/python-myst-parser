@@ -39,6 +39,10 @@ MyST in Python and Sphinx. It contains an extended CommonMark-compliant parser
 using markdown-it-py, as well as a Sphinx extension that allows you to write
 MyST Markdown in Sphinx.
 
+%prep -a
+# Relax upper bounds on docutils
+sed -i 's:"docutils>=0.20,<0.23":"docutils>=0.21,<0.24":g' pyproject.toml
+
 %files
 %doc README.md
 %{_bindir}/myst-{anchors,docutils-demo,docutils-html,docutils-html5,docutils-latex,docutils-pseudoxml,docutils-xml,inv}
